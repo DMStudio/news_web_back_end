@@ -1,3 +1,6 @@
 .header-slider{height: 5em}
 #header span{font-size: 25px;margin-left: 25px;padding-top: 35px;margin-top: 25px;}
 .el-menu--horizontal .el-menu-item{height: 80px;line-height: 80px}
+.cell{max-height: 200px}
+/*.cell{max-height: 200px;overflow: scroll;height: 200px}*/
+/*image{overflow: visible;border: red 2px solid}*/
