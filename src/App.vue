@@ -7,7 +7,6 @@
           <template slot="title">我的工作台</template>
           <el-menu-item index="2-1">选项1</el-menu-item>
           <el-menu-item index="2-2">选项2</el-menu-item>
-          <el-menu-item index="2-3">选项3</el-menu-item>
         </el-submenu>
         <!--<el-menu-item index="3"><a href="javascript：" target="_blank">订单管理</a></el-menu-item>-->
         <!--<el-menu-item style="float: right"><i class="el-icon-circle-cross" style="font-size: 2em"></i></el-menu-item>-->
@@ -19,7 +18,7 @@
 
     <el-row class="tac">
       <el-col :span="3" style="display: inline-block">
-        <el-menu default-active="1" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" style=";position: fixed;top:70px;bottom:0;width:150px;margin-left: 0px;padding-left: 0px" theme="dark">
+        <el-menu default-active="1" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" style=";position: fixed;top:80px;bottom:0;width:240px;margin-left: 0px;padding-left: 0px" theme="dark">
           <router-link to="/test1" style="text-decoration: none;color: #bfcbcf"><el-menu-item index="1"><i class="el-icon-menu"></i>导航一</el-menu-item></router-link>
           <router-link to="/test2"><el-menu-item index="2"><i class="el-icon-setting"></i>导航二</el-menu-item></router-link>
           <el-submenu index="3">

@@ -1,54 +1,8 @@
 <template>
 <div class="el-col el-col-21" id="app">
-  <el-row style="position: relative;margin-top: 100px;float: right;margin-right: -150px">
-    <el-col :span="8">
-      <el-button  type="info" @click="dialogFormVisible = true" style="margin-left: 40%;margin-top: 2%;font-size: large">创建新表单</el-button>
-      <el-dialog title="填写新表单" :visible.sync="dialogFormVisible">
-        <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
-          <el-form-item label="表单标题" prop="title">
-            <el-input v-model="ruleForm.title"></el-input>
-          </el-form-item>
-          <el-form-item label="表单内容" prop="content">
-            <el-input type="textarea" min-rows="2" max-rows="4" v-model="ruleForm.content"></el-input>
-          </el-form-item>
-          <el-form-item label="表单类型" prop="type_id">
-            <el-input v-model.number="ruleForm.type_id"></el-input>
-          </el-form-item>
-          <el-form-item label="图片链接" prop="img_url">
-            <el-input v-model="ruleForm.img_url"></el-input>
-          </el-form-item>
 
-          <el-form-item>
-            <el-button type="primary" @click="submitForm">立即创建</el-button>
-            <el-button @click="resetForm('ruleForm')">重置</el-button>
-          </el-form-item>
-        </el-form>
-      </el-dialog>
-      <el-dialog title="修改表单" :visible.sync="dialogFormVisible2">
-        <el-form :model="ruleForm2" :rules="rules" ref="ruleForm2" label-width="100px" class="demo-ruleForm">
-          <el-form-item label="表单标题" prop="title">
-            <el-input v-model="ruleForm2.title"></el-input>
-          </el-form-item>
-          <el-form-item label="表单内容" prop="content">
-            <el-input type="textarea" min-rows="2" max-rows="4" v-model="ruleForm2.content"></el-input>
-          </el-form-item>
-          <el-form-item label="表单类型" prop="type_id">
-            <el-input v-model.number="ruleForm2.type_id"></el-input>
-          </el-form-item>
-          <el-form-item label="图片链接" prop="img_url">
-            <el-input v-model="ruleForm2.img_url"></el-input>
-          </el-form-item>
-          <el-form-item>
-            <el-button type="primary" @click="confirmFixedForm">确定修改</el-button>
-            <el-button @click="resetForm('ruleForm2')">重置</el-button>
-          </el-form-item>
-        </el-form>
-      </el-dialog>
-    </el-col>
-    <!--<my-page></my-page>-->
-    <!--<el-button @click.native="startHacking">Let's do it</el-button>-->
-  </el-row>
-  <div style="width: 95%;position: fixed;left: 150px;top: 150px;">
+
+  <div style="width: 95%;position: fixed;left: 240px;top: 150px;">
     <el-table
       :data="tableData4"
       border
@@ -120,7 +74,57 @@
         </template>
       </el-table-column>
     </el-table>
-    <my-page style="float: right;margin-right: 150px;margin-top: 45px"></my-page>
+
+    <my-page style="float: right;margin-right: 240px;margin-top: 45px"></my-page>
+  </div>
+  <div>
+    <el-row style="float: right;;margin-right: -150px;position: fixed;top: 100px;right: 240px">
+      <el-col>
+        <el-button  type="info" @click="dialogFormVisible = true" style=";font-size: large;">创建新表单</el-button>
+        <el-dialog title="填写新表单" :visible.sync="dialogFormVisible">
+          <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
+            <el-form-item label="表单标题" prop="title">
+              <el-input v-model="ruleForm.title"></el-input>
+            </el-form-item>
+            <el-form-item label="表单内容" prop="content">
+              <el-input type="textarea" min-rows="2" max-rows="4" v-model="ruleForm.content"></el-input>
+            </el-form-item>
+            <el-form-item label="表单类型" prop="type_id">
+              <el-input v-model.number="ruleForm.type_id"></el-input>
+            </el-form-item>
+            <el-form-item label="图片链接" prop="img_url">
+              <el-input v-model="ruleForm.img_url"></el-input>
+            </el-form-item>
+
+            <el-form-item>
+              <el-button type="primary" @click="submitForm">立即创建</el-button>
+              <el-button @click="resetForm('ruleForm')">重置</el-button>
+            </el-form-item>
+          </el-form>
+        </el-dialog>
+        <el-dialog title="修改表单" :visible.sync="dialogFormVisible2">
+          <el-form :model="ruleForm2" :rules="rules" ref="ruleForm2" label-width="100px" class="demo-ruleForm">
+            <el-form-item label="表单标题" prop="title">
+              <el-input v-model="ruleForm2.title"></el-input>
+            </el-form-item>
+            <el-form-item label="表单内容" prop="content">
+              <el-input type="textarea" min-rows="2" max-rows="4" v-model="ruleForm2.content"></el-input>
+            </el-form-item>
+            <el-form-item label="表单类型" prop="type_id">
+              <el-input v-model.number="ruleForm2.type_id"></el-input>
+            </el-form-item>
+            <el-form-item label="图片链接" prop="img_url">
+              <el-input v-model="ruleForm2.img_url"></el-input>
+            </el-form-item>
+            <el-form-item>
+              <el-button type="primary" @click="confirmFixedForm">确定修改</el-button>
+              <el-button @click="resetForm('ruleForm2')">重置</el-button>
+            </el-form-item>
+          </el-form>
+        </el-dialog>
+      </el-col>
+      <!--<el-button @click.native="startHacking">Let's do it</el-button>-->
+    </el-row>
   </div>
 
 
