@@ -2,5 +2,32 @@
 #header span{font-size: 25px;margin-left: 25px;padding-top: 35px;margin-top: 25px;}
 .el-menu--horizontal .el-menu-item{height: 80px;line-height: 80px}
 .cell{max-height: 200px}
+
+
+.max-height{font-size: 50px}
+.el-upload__input {display: none !important;}
+.avatar-uploader .el-upload {
+  border: 1px dashed #d9d9d9;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.avatar-uploader .el-upload:hover {
+  border-color: #20a0ff;
+}
+.avatar-uploader-icon {
+  font-size: 28px;
+  color: #8c939d;
+  width: 178px;
+  height: 178px;
+  line-height: 178px;
+  text-align: center;
+}
+.avatar {
+  width: 178px;
+  height: 178px;
+  display: block;
+}
 /*.cell{max-height: 200px;overflow: scroll;height: 200px}*/
 /*image{overflow: visible;border: red 2px solid}*/

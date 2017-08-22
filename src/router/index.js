@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Hello from '@/components/Hello'
 import Test1 from '@/components/test1'
 import Test2 from '@/components/test2'
+import Address from '@/components/address'
 // import JavaScript from '@/components/JavaScript'
 // import FrontEnd from '@/components/FrontEnd'
 // import PersonalLog from '@/components/PersonalLog'
@@ -25,6 +26,11 @@ export default new Router({
       path:'/test2',
       name:'Test2',
       component:Test2,
+    },
+    {
+      path:'/address',
+      name:'Address',
+      component:Address,
     }
   ]
 })

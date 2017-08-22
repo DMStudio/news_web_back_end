@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <div id="header">
-      <el-menu theme="dark" :default-active="activeIndex" class="header-slider" mode="horizontal" @select="handleSelect" style="position: fixed;width: 100%">
-        <el-menu-item index="1"><span>商院一点通后台管理系统</span></el-menu-item>
+      <el-menu theme="dark" :default-active="activeIndex" class="header-slider" mode="horizontal" @select="handleSelect" style="position: fixed;;width: 100%;">
+        <el-menu-item index="1"><span style="font-size:2rem;">商院一点通后台管理系统</span></el-menu-item>
         <el-submenu index="2">
           <template slot="title">我的工作台</template>
           <el-menu-item index="2-1">选项1</el-menu-item>
@@ -17,10 +17,11 @@
     </div>
 
     <el-row class="tac">
-      <el-col :span="3" style="display: inline-block">
-        <el-menu default-active="1" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" style=";position: fixed;top:80px;bottom:0;width:240px;margin-left: 0px;padding-left: 0px" theme="dark">
+      <el-col :span="3" style="display: inline-block;">
+        <el-menu default-active="1" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" style=";position: fixed;top:80px;bottom:0;width:240px;margin-left: 0px;padding-left: 0px;" theme="dark">
           <router-link to="/test1" style="text-decoration: none;color: #bfcbcf"><el-menu-item index="1"><i class="el-icon-menu"></i>导航一</el-menu-item></router-link>
-          <router-link to="/test2"><el-menu-item index="2"><i class="el-icon-setting"></i>导航二</el-menu-item></router-link>
+          <router-link to="/test2" style="text-decoration: none;color: #bfcbcf"><el-menu-item index="2"><i class="el-icon-setting"></i>导航二</el-menu-item></router-link>
+          <router-link to="/address" style="text-decoration: none;color: #bfcbcf"><el-menu-item index="1"><i class="el-icon-menu"></i>地图联动</el-menu-item></router-link>
           <el-submenu index="3">
             <template slot="title"><i class="el-icon-message"></i>导航三</template>
             <el-menu-item-group>
@@ -96,6 +97,6 @@
     text-align: center;
   }
   body{margin-left: 0px;margin-top: 0px}
-  .el-menu--horizontal .el-menu-item{height: 80px;line-height: 80px}
+  .el-menu--horizontal .el-menu-item{height: 80px;line-height: 80px;}
   .el-menu--horizontal .el-submenu .el-submenu__title{height: 80px;line-height: 80px}
 </style>
